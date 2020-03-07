@@ -1,0 +1,14 @@
+<div>
+  <h1> Index </h1>
+    <% @kittens.each do |kitten| %>
+      <ul> 
+        <li> Name: <%= kitten.name %> </li>
+        <li> Age: <%= kitten.age %> </li>
+        <li> Cuteness: <%= kitten.cuteness %> </li>
+        <li> Softness: <%= kitten.softness %> </li>
+        <div>
+          <%= link_to "Destroy", kitten, method: :delete, date: {confirm: "Are you sure?"} %>
+        </div>
+      </ul> 
+    <% end %>
+</div>
